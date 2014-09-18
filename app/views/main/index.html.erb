@@ -1,6 +1,47 @@
-<div>
-    <div>
-        <h1>Randome Musings of a Madman</h1>
-        <h3>Thoughts of a dev with a box</h3>
+<div class = 'login-wrapper'>
+    <div class = 'login'>
+        <div class = 'close'>X</div>
+        Insert form here
     </div>
 </div>
+
+<div class = 'titlebar'>
+    <div class = 'title'>
+        <h1>Randome Musings of a Madman</h1><br>
+        <h3>
+            <script>
+                subtitle = ["I'm deffinatly a dev with a box","Wibbely Wobbley Timey Wimey Stuff","Luke at that speed will you be able to develop in time?","Insert another funny comment"]
+                selection = Math.floor(Math.random()*4)
+                document.write(subtitle[selection])
+            </script>
+        </h3>
+    </div>
+    <div class = 'side'>
+        <div>
+        <p>
+            Current Time: 
+        </p>
+            <p>
+                <% current = Time.now %>
+                <%= p current.strftime("%Y-%m-%d %H:%M:%S")  %>
+            </p><br>
+            <div class = 'login-links' >
+            <div id = 'login'>Login</div>
+            <div id = 'signup'>Signup</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = 'content'>
+    <div class = article>
+        <div class = article-header>
+            <h2><%= @article.title %></h2>
+            <h3><%= @article.created_at %></h3>
+        </div>
+        <div class = 'body'>
+            <%= @article.body %>
+        </div>
+    </div>
+</div>
+

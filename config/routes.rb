@@ -1,4 +1,6 @@
 Madman::Application.routes.draw do
+  resources :articles
+  resources :main
   get "main/index"
   root 'main#index'
   # The priority is based upon order of creation: first created -> highest priority.
